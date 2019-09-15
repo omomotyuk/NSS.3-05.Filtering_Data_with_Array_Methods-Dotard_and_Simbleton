@@ -5,7 +5,6 @@
 //import businesses from "./businesses.js"
 //import showBisiness from "./showBusiness.js"
 
-
 //
 const outputElement = document.querySelector("#output")
 
@@ -26,33 +25,29 @@ const outputElement = document.querySelector("#output")
 /*
   Using map(), you extract the purchasing agent object from each business and store it in a new array
 */
-import mapMethod from "./map-method.js"
-mapMethod( outputElement )
+//import mapMethod from "./map-method.js"
+//mapMethod( outputElement )
 
 /*
-  find-method
+  find() method
 */
 //import findMethod from "./find-method.js"
 //findMethod( outputElement )
 
 /*
-  reduce-method
+  reduce() method
 */
 //import reduceMethod from "./reduce-method.js"
 //reduceMethod( outputElement )
 
-
+/*
+  reduce() method Lightning Exercise 1: Use the reduce method on the following array to determine how much total rain fell last month.
+*/
+//import reduceMethodLE1 from "./reduce-method-LE1.js"
+//reduceMethodLE1( outputElement )
 
 /*
-    {
-      purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
-      phoneWork: "089.129.2290 x9400",
-      orders: [7826.96, 8323.11, 5756.28, 6308.42, 5622.28],
-      companyName: "Care-media",
-      companyIndustry: "Education",
-      addressZipCode: "56839",
-      addressStateCode: "WI",
-      addressFullStreet: "8417 Franklin Court Tunnel",
-      addressCity: "Mouthcard"
-    },
+  reduce() method Lightning Exercise 2: Use the reduce method on the following array to build a sentence.
 */
+import reduceMethodLE2 from "./reduce-method-LE2.js"
+reduceMethodLE2( outputElement )
