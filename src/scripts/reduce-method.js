@@ -6,17 +6,11 @@ import businesses from "./businesses.js"
 import showBusiness from "./showBusiness.js"
 
 const reduceMethod = ( outputElement ) => {
-    
-    businesses.forEach(business => {
-        /* CALCULATE ORDER SUMMARY */
-        let totalOrders = 0
-        business.orders.forEach(order => totalOrders += order)
-    
-    
-        outEl.innerHTML += `
+
+    const showTotalOrders = ( business,totalOrders ) => {
+        return `
             <h2>
-                ${business.companyName}
-                ($${totalOrders})
+                ${business.companyName} ($${totalOrders})
             </h2>
             <section>
                 ${business.addressFullStreet}
@@ -26,9 +20,24 @@ const reduceMethod = ( outputElement ) => {
                 ${business.addressStateCode}
                 ${business.addressZipCode}
             </section>
-        `;
-        outEl.innerHTML += "<hr/>";
-    });
+        `
+    }
+
+    businesses.forEach( business => {
+        /* CALCULATE ORDER SUMMARY */
+        // forEach version:
+        /*let totalOrders = 0
+        business.orders.forEach( order => totalOrders += order )*/
+
+        // reduce version:
+        let totalOrders = business.orders.reduce(
+            (currentTotal, nextValue) => currentTotal += nextValue,
+            0
+        )
+
+        outputElement.innerHTML += showTotalOrders( business,totalOrders )
+        outputElement.innerHTML += "<hr/>"
+    })
 }
 
 export default reduceMethod
