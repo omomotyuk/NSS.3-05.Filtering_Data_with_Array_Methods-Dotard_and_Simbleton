@@ -49,5 +49,11 @@ const outputElement = document.querySelector("#output")
 /*
   reduce() method Lightning Exercise 2: Use the reduce method on the following array to build a sentence.
 */
-import reduceMethodLE2 from "./reduce-method-LE2.js"
-reduceMethodLE2( outputElement )
+//import reduceMethodLE2 from "./reduce-method-LE2.js"
+//reduceMethodLE2( outputElement )
+
+/*
+  Practice: Big Spenders
+*/
+import bigSpenders from "./big-spenders.js"
+bigSpenders( outputElement )
